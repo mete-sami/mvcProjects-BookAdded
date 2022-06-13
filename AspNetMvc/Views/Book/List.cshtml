@@ -1,0 +1,62 @@
+﻿
+@using AspNetMvc.Models.ORM
+@model List<Book>
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+.container {
+  border-radius: 5px;
+  background-color: forestgreen;
+  padding: 20px;
+}
+</style>
+</head>
+<body>
+
+<h3>List Form</h3>
+
+<div class="container">
+  <table action ="/Book/List" >
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Writer</th>
+        <th>Description</th>
+    </tr>
+    @foreach(var item in Model)
+    {
+    <tr>
+        <td> @item.Id</td>
+        <td> @item.Name</td>
+        <td> @item.Writer</td>
+        <td> @item.Description</td>
+    </tr>
+       }
+</table>
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

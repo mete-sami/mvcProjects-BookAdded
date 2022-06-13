@@ -1,0 +1,49 @@
+﻿@model AspNetMvc.Models.ORM.Book
+
+    <!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+.container {
+  border-radius: 5px;
+  background-color: forestgreen;
+  padding: 20px;
+}
+</style>
+</head>
+<body>
+
+<h3>Book-Form</h3>
+
+<div class="container">
+    <form action ="/Book/add" method="post">
+        <div>
+             @Html.LabelFor(x => x.Name)
+             @Html.TextBoxFor(x => x.Name)
+        </div>
+       <div>
+           @Html.LabelFor(x => x.Writer)
+           @Html.TextBoxFor(x => x.Writer)
+       </div>
+       <div>
+            @Html.LabelFor(x => x.Description)
+           @Html.TextAreaFor(x => x.Description)
+       </div>
+
+       <div>
+           <input type="submit" name="Add"/>
+
+       </div>
+
+
+
+    </form>
+
+</div>
+
+</body>
+</html>

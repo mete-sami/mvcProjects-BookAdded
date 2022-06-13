@@ -13,6 +13,7 @@ namespace AspNetMvc.Models.ORM
         public DbSet<Category> Categories { get; set; }
         public DbSet<Employee> Employees { get; set; }
         public DbSet<Client> Clients { get; set; }
+        public DbSet<Book> Books { get; set; }
     }
 }
 //güncelleme diye buton olacak
